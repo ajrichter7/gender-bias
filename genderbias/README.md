@@ -3,24 +3,19 @@
 Various detectors have been implemented with the intent to test for bias in letters of recommendation.
 
 ## Description
+The current available detectors are:
 
-Detectors can be run individually by specifying what detector you want to run.
-
-You can run them on files by
-```
-```
-or you can run them on text in the terminal through using
-```
-echo "insert text here" | genderbias --detector Detector
-```
-and insert the text you want to eest and be sure to change Detector to a specific detector.
-
-A list of detectors can be displayed through the command
-
-```
-genderbias -detector 
-```
-
+###### AVAILABLE DETECTORS:
+* GenderedWordDetector
+*  PersonalLifeDetector
+* EffortDetector
+* PublicationDetector
+*  FemaleDetector
+*  AgenticDetector
+*  MaleDetector
+*  ConditionalSuperlativesDetector
+*  GrindstoneDetector
+*  SuperlativeDetector
 
 ## Getting Started
 
@@ -49,18 +44,31 @@ echo $SHELL
 
 ### How to Run Detectors
 
-* How to run the program
-* Step-by-step bullets
+Detectors can be run individually by specifying what detector you want to run.
+
+A list of detectors can be displayed through the command
+
 ```
-code blocks for commands
+genderbias --list-detectors
 ```
+1. You can run them on files by
+```
+genderbias -f ./example_letters/letterofRecW --detectors  Detector    
+```
+where you can specify the path to a file and multiple or one detector to run.
+
+2. You can run them on text in the terminal through using
+```
+echo "insert text here" | genderbias --detector Detector
+```
+and insert the text you want to eest and be sure to change Detector to a specific detector.
+
+
 
 ### How to Write Detectors
 
 There is a lovely guide for writing new detectors linked [here](https://github.com/gender-bias/gender-bias/tree/master/docs/hacking). It was created by [Jordan Matelsky](https://github.com/j6k4m8) for those who are interested in either writing new detectors or understanding the code for the existing detectors.
-```
-code blocks for commands
-```
+
 ## Help
 
 Any advise for common problems or issues.
