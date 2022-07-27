@@ -75,7 +75,7 @@ class Document:
             List[str]
 
         """
-        return [s.string.replace("\n", "") for s in self._spacy_doc.sents]
+        return [s.text.replace("\n", "") for s in self._spacy_doc.sents]
 
     @cached
     def words(self) -> List[str]:
@@ -86,7 +86,7 @@ class Document:
             List[str]
 
         """
-        return [tok.string.strip() for tok in self._spacy_doc]
+        return [tok.text.strip() for tok in self._spacy_doc]
 
     @cached
     def words_with_indices(self) -> List[Tuple[str, int, int]]:

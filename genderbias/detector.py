@@ -194,6 +194,19 @@ class Report:
         """
         self._summary = summary
 
+    def get_summary(self) -> str:
+        """
+        Get the summary from this Report.
+
+        Arguments:
+            None
+
+        Returns:
+            str summary
+
+        """
+        return self._summary
+
     def to_string(self) -> str:
         """
         Converts the Report into a string, which can be printed to stdout.
@@ -245,6 +258,8 @@ class Report:
                     f"  {bad_indicator}\t"
                     + pretty_format([color_scheme.RED], str(flag))
                 )
+        if self._summary:
+            text_lines.append(" SUMMARY: " + self._summary)
         return "\n".join(text_lines)
 
     def to_dict(self) -> dict:
