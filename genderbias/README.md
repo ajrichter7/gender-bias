@@ -3,19 +3,21 @@
 Various detectors have been implemented with the intent to test for bias in letters of recommendation.
 
 ## Description
-This project investigates various detectors as a way to determine bias in letters of recommendation. Each detector has been thoughtfully chosen and developed. The reasoning behind the detectors is included along with citations for those curious. 
+This project investigates various detectors as a way to determine bias in letters of recommendation. Each detector has been thoughtfully chosen and developed. The reasoning behind the detectors is included along with citations for those curious.
+
+NOTE: I will need to change these links when merging because they link to forked repo.
 
 ###### AVAILABLE DETECTORS:
-* GenderedWordDetector
-*  PersonalLifeDetector
-* EffortDetector
-* PublicationDetector
-*  FemaleDetector
-*  AgenticDetector
-*  MaleDetector
-*  ConditionalSuperlativesDetector
-*  GrindstoneDetector
-*  SuperlativeDetector
+* [GenderedWordDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/genderedwords)
+*  [PersonalLifeDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/personal_life)
+* [EffortDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/effort)
+* [PublicationDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/publications)
+*  [FemaleDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/femalewords)
+*  [AgenticDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/agentic)
+*  [MaleDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/malewords)
+*  [ConditionalSuperlativesDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/conditionalsuperlatives)
+*  [GrindstoneDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/grindstone)
+*  [SuperlativeDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/superlatives)
 
 ## Getting Started
 
