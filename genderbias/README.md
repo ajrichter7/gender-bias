@@ -3,7 +3,7 @@
 Various detectors have been implemented with the intent to test for bias in letters of recommendation.
 
 ## Description
-The current available detectors are:
+This project investigates various detectors as a way to determine bias in letters of recommendation. Each detector has been thoughtfully chosen and developed. The reasoning behind the detectors is included along with citations for those curious. 
 
 ###### AVAILABLE DETECTORS:
 * GenderedWordDetector
