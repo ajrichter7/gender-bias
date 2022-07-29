@@ -21,7 +21,7 @@ NOTE: I will need to change these links when merging because they link to forked
 * [EffortDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/effort)
   * Letters for women are more likely to highlight effort (she is hard-working) instead of highlighting accomplishments (her research is groundbreaking).
 * [GrindstoneDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/grindstone)
-  * This will be combined with the effort detector.
+  * This will be combined with the effort detector. Should I combine these to? There are different word lists and grindstone ones seems to be a subset of effort detector, I am unsure as the source for the effort detector wordlist. Grindstone detector is directly from a paper: [Gender Matters](https://physicstoday.scitation.org/doi/10.1063/PT.3.3870).
 * [AgenticDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/agentic)
   * Letters for women are less likely to include agentic words and more likely to include communal terms (Madera).
 * [ConditionalSuperlativesDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/conditionalsuperlatives)

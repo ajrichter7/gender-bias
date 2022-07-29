@@ -1,5 +1,6 @@
 from genderbias.detector import Detector, Flag, Issue, Report
 import os
+import re
 
 """
 Letters for women are less likely to contain superlatives (best, most, top, greatest).
@@ -14,8 +15,14 @@ the author to add superlatives that include accomplishments, skills, or capabili
 """
 _dir = os.path.dirname(__file__)
 SUPERLATIVE_WORDS = [word.strip() for word in open(_dir + "/superlative.wordlist", 'r').readlines()]
-GENDERED_WORDS = [w.strip() for w in open(_dir + "/genderedwords.wordlist", "r").readlines()]
+FEMALE_GENDERED_WORDS = [w.strip() for w in open(_dir + "/genderedwords.wordlist", "r").readlines()]
 
+def found_gendered_word(word):
+    for femaleword in FEMALE_GENDERED_WORDS:
+        searchTerm = "^" + femaleword + ".."
+        x = re.search(searchTerm, word)
+        if x: return True
+    return False
 class SuperlativeDetector(Detector):
 
     def get_report(self, doc):
@@ -29,23 +36,24 @@ class SuperlativeDetector(Detector):
             start = words_with_indices[i][1]
             stop = words_with_indices[i][2]
 
-            if word.lower() in SUPERLATIVE_WORDS and words_with_indices[i+1][0] in GENDERED_WORDS:
-                found_negative_superlative = True
-                superlative_report.add_flag(
-                    Flag(start, stop, Issue(
-                        "superlativeWord",
-                        "Be careful in using superlatives because in most cases they apply to emotional terms for women. '{word}' is an superlative-sounding word.".format(
-                            word=word),
-                        "Try replacing with phrasing that emphasizes that this person's skills that are job related and not emotion based."
-                    ))
+            if word.lower() in SUPERLATIVE_WORDS:
+                if found_gendered_word(words_with_indices[i+1][0]):
+                    fem = words_with_indices[i+1][0]
+                    found_negative_superlative = True
+                    superlative_report.add_flag(
+                        Flag(start, stop, Issue(
+                            "superlativeWord",
+                            "Be careful in using superlatives because in most cases they apply to emotional terms for women. '{word} {fem_word}' is using a superlative in front of a female gendered term. ".format(
+                                word=word, fem_word=fem),
+                                "Try replacing with phrasing that emphasizes that this person's skills that are job related and not emotion based."
+                                ))
                 )
-
-            elif word.lower() in SUPERLATIVE_WORDS:
-                found_positive_superlative = True
-                superlative_report.add_flag(
-                Flag(start, stop, Issue("superlativeWord",
-                        "This word seems fine in this context.",
-                        bias=Issue.positive_result)))
+                else:
+                    found_positive_superlative = True
+                    superlative_report.add_flag(
+                    Flag(start, stop, Issue("superlativeWord",
+                            "This word seems fine in this context.",
+                                         bias=Issue.positive_result)))
 
         if found_positive_superlative or found_negative_superlative:
             superlative_report.set_summary("Found some superlative words. Make sure to double check the context of these words. If describing something strictly related to the position, such as 'NAME is the top of their class' that is is okay. If it is emotional, such as 'NAME is the most compassionate employee', change this phrase.")
