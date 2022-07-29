@@ -9,22 +9,25 @@ NOTE: I will need to change these links when merging because they link to forked
 
 ###### AVAILABLE DETECTORS:
 * [FemaleDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/femalewords)
+  * A detector for words that tend to be used more frequently for recruiting women than for recruiting men.
 * [MaleDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/malewords)
+  * Detect words that are more commonly used to recruit men rather than women.
 * [GenderedWordDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/genderedwords)
+  * This detector checks for words that call unnecessary attention to the gender of the letter recipient.
 * [PersonalLifeDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/personal_life)
   * Letters for women are more likely to discuss personal life.
 * [PublicationDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/publications)
   * Letters for women are less likely to mention publications and projects
-    * **Goal:** Develop code that can read text for details (numbers of publications, mention of participation and contribution to project(s)). If the text fails to mention of publications and projects or details are absent, return a summary statement that directs the author to mention publications and projects and include a description of them to strengthen the letter.
 * [EffortDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/effort)
   * Letters for women are more likely to highlight effort (she is hard-working) instead of highlighting accomplishments (her research is groundbreaking).
 * [GrindstoneDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/grindstone)
+  * This will be combined with the effort detector.
 * [AgenticDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/agentic)
+  * Letters for women are less likely to include agentic words and more likely to include communal terms (Madera).
 * [ConditionalSuperlativesDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/conditionalsuperlatives)
+  * This detector checks for conditional superlatives, or superlatives that are "hedged" by restricting the population to only women. These are phrases like "the best woman for the job" or "best of all women" that are clear 'hedged' superlatives
 * [SuperlativeDetector](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/superlatives)
   * Letters for women are less likely to contain superlatives (best, most, top, greatest). If they contain superlatives, they usually describe women in the context of emotional terms (she was the most compassionate).
-    * **Goal:**  Develop code that can read text for superlatives. If the text lacks superlatives, return a summary statement that directs the author to add superlatives.
-    * If superlatives are present, search for the adjectives or nouns associated with the superlative. If they are emotion or gendered terms (compassion), return a summary statement that directs the author to add superlatives that include accomplishments, skills, or capabilities.
 
 ###### INCOMPLETE DETECTORS:
 
