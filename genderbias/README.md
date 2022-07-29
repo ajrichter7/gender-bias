@@ -29,7 +29,7 @@ NOTE: I will need to change these links when merging because they link to forked
 ###### INCOMPLETE DETECTORS:
 
 * Repetition
-  * Letters for men are far more likely to repeat positive words than letters for women: Here we found that the letters for women that had at least one of these terms had an average of 1.5 terms, whereas the letters for men that included at least one had an average of 2.0 such terms. That is, there was repetition of standout adjectives within men’s letters to a greater extent. (Trix & Psenka 2003, pg 18(208)
+  * Letters for men are far more likely to repeat positive words than letters for women: Here we found that the letters for women that had at least one of these terms had an average of 1.5 terms, whereas the letters for men that included at least one had an average of 2.0 such terms. That is, there was repetition of standout adjectives within men’s letters to a greater extent. (Trix & Psenka 2003, pg 18(208))
 * Minimal Assurance
   * Letters for women are more likely to include minimal assurance (she can do the job) rather than a strong endorsement (he has all the necessary skills to excel in this position).
     * **Goal:** Develop code that can read text for minimal assurance. If the text includes minimum assurance statements, return a summary statement that directs the author to remove the minimal assurance and replace it a strong endorsement. If the text lacks strong endorsements, return a summary statement that directs the author to add one.
@@ -71,13 +71,13 @@ genderbias --list-detectors
 ```
 genderbias -f ./example_letters/letterofRecW --detectors  Detector    
 ```
-where you can specify the path to a file and multiple or one detector to run.
+where you can specify the path to a file and multiple or one detector to run, be sure to change Detector to a specific detector.
 
 2. You can run them on text in the terminal through using
 ```
 echo "insert text here" | genderbias --detector Detector
 ```
-and insert the text you want to eest and be sure to change Detector to a specific detector.
+and insert the text you want to test and be sure to change Detector to a specific detector.
 
 
 ### How to Write Detectors
