@@ -10,6 +10,10 @@ found in letters of recommendation for men. Grindstone words, which create the i
 that a candidate works hard but is not intellectually exceptional, are more often
 used for women." (Blue et al. 2018)
 
+Citations:
+Assessing Gender Bias in Particle Physics and Social Science Recommendations for Academic Jobs
+Exploring the color of glass: letters of recommendation for female and male medical faculty
+
 Goal: Check for grindstone words.
 """
 _dir = os.path.dirname(__file__)
