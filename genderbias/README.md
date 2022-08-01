@@ -30,16 +30,19 @@ NOTE: I will need to change these links when merging because they link to forked
   * Letters for women are less likely to contain superlatives (best, most, top, greatest). If they contain superlatives, they usually describe women in the context of emotional terms (she was the most compassionate).
 * [Repetition](https://github.com/ajrichter7/gender-bias/tree/master/genderbias/repetition)
   * Letters for men are far more likely to repeat positive words than letters for women: Here we found that the letters for women that had at least one of these terms had an average of 1.5 terms, whereas the letters for men that included at least one had an average of 2.0 such terms. That is, there was repetition of standout adjectives within men’s letters to a greater extent. (Trix & Psenka 2003, pg 18(208))
+
+###### WORK TO BE DONE:
+  * Gender stereotypes for emotion-focused words
+    * **This one already exists in the form of female and male detector. I also believe it is the same as agentic detector.** I am unsure if I should just remove the agentic one and then like mark this as completed as it uses regex and seems to be working in two different detectors (female/male).
+    * Letters for women are more likely to include gender stereotypes (she is compassionate vs he is a leader) and emotion-focused words.
+      * **Goal:** Develop code that can read text for words and gender stereotypes and highlight them (Word List). Return a summary statement that directs the author to review the highlighted words and evaluate whether they are relevant for the recommendation or evaluation. If the emotion-focused words are relevant to the letter or evaluation, suggest that the author include additional statements that balance them out and highlight other relevant areas like skills and accomplishments.
+      * *Note on the word list:* some of the words are incomplete, for example "shar" is included so that it  captures sharing or shared or share.
+
 ###### INCOMPLETE DETECTORS:
-
-
+**I need help figuring out how to do these last two!**
 * Minimal Assurance
   * Letters for women are more likely to include minimal assurance (she can do the job) rather than a strong endorsement (he has all the necessary skills to excel in this position).
     * **Goal:** Develop code that can read text for minimal assurance. If the text includes minimum assurance statements, return a summary statement that directs the author to remove the minimal assurance and replace it a strong endorsement. If the text lacks strong endorsements, return a summary statement that directs the author to add one.
-* Gender stereotypes for emotion-focused words (How is this different than communal?)
-  * Letters for women are more likely to include gender stereotypes (she is compassionate vs he is a leader) and emotion-focused words.
-    * **Goal:** Develop code that can read text for words and gender stereotypes and highlight them (Word List). Return a summary statement that directs the author to review the highlighted words and evaluate whether they are relevant for the recommendation or evaluation. If the emotion-focused words are relevant to the letter or evaluation, suggest that the author include additional statements that balance them out and highlight other relevant areas like skills and accomplishments.
-    * *Note on the word list:* some of the words are incomplete, for example "shar" is included so that it  captures sharing or shared or share.
 * Adjective Usage
   * Letters for women are more likely to use adjectives instead of nouns
     * **Goal:** Develop code that can read text for the presence of nouns that highlight roles/positions (like leader, researcher). If position nouns are absent, return a summary statement that directs the author to consider using nouns to strengthen the letter.
