@@ -51,8 +51,10 @@ class ConditionalSuperlativesDetector(Detector):
         report = Report("Conditional Superlatives")
 
         text = doc.text()
+        found = False
         for regex in CONDITIONAL_SUPERLATIVE_REGEXES:
             for match in re.finditer(regex, text):
+                found = True
                 report.add_flag(
                     Flag(
                         match.span()[0],
@@ -63,5 +65,10 @@ class ConditionalSuperlativesDetector(Detector):
                         ),
                     )
                 )
+        if found:
+            report.set_summary("There are conditional superlatives present. Consider removing them.")
+        else:
+            report.set_summary("No conditional superlatives found. This is a good indicator in this case.")
+            print(report.pprint())
 
         return report
