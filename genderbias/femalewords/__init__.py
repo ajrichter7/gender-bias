@@ -22,18 +22,26 @@ class FemaleDetector(Detector):
 
         found = False
         for word, start, stop in words_with_indices:
-            word = word.lower()
-            for femaleword in FEMALE_WORDS:
-                searchTerm = "^" + femaleword + ".."
-                x = re.search(searchTerm, word)
-                if x:
-                    found = True
-                    female_report.add_flag(
-                        Flag(start, stop, Issue("{word}".format(word=word)))
+            if word.lower() in FEMALE_WORDS:
+                found = True
+                female_report.add_flag(
+                    Flag(
+                        start,
+                        stop,
+                        Issue(
+                            "Female Gendered Word",
+                            f"The word '{word}' is female gendered.",
+                            "Consider if this is an important phrasing or descriptor to include",
+                            bias=Issue.negative_result,
+                        ),
                     )
+                )
 
         if found:
             female_report.set_summary(
                 "Depending on context, these words may be biased towards recruiting women"
             )
+        else:
+            female_report.set_summary("There are no biased terms.")
+            print(female_report.pprint())
         return female_report

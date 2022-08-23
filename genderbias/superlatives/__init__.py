@@ -59,5 +59,5 @@ class SuperlativeDetector(Detector):
             superlative_report.set_summary("Found some superlative words. Make sure to double check the context of these words. If describing something strictly related to the position, such as 'NAME is the top of their class' that is is okay. If it is emotional, such as 'NAME is the most compassionate employee', change this phrase.")
         else:
             superlative_report.set_summary("There were no superlative words. Consider adding some that relate to accomplishment instead of character, such as 'NAME is the most accomplished undergraduate' as opposed to 'NAME is the most compassionate'. Describe accomplishments over emotion or character.")
-
+    #print(superlative_report.pprint())
         return superlative_report
