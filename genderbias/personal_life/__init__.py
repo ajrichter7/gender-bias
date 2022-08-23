@@ -52,9 +52,10 @@ class PersonalLifeDetector(Detector):
         report = Report("Personal Life")
 
         token_indices = doc.words_with_indices()
-
+        found = False
         for word, start, stop in token_indices:
             if word.lower() in PERSONAL_LIFE_TERMS:
+                found = True
                 report.add_flag(
                     Flag(
                         start,
@@ -68,6 +69,11 @@ class PersonalLifeDetector(Detector):
                         ),
                     )
                 )
+        if found:
+            report.set_summary("Good job not discussing personal life of the candidate.")
+        else:
+            report.set_summary("You discussed the personal life of this candidate. Please consider removing instances not relevant to the position.")
+            print(report.pprint())
         return report
 
 

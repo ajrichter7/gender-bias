@@ -50,5 +50,7 @@ class AgenticDetector(Detector):
             agentic_report.set_summary("There were some agentic words, but no communal words. This is okay.")
         elif found_communal:
             agentic_report.set_summary("There were no agentic words, but did contain communal words. Communal words are strongly gendered and appear more in female letters. They deal with talking about the subject in relation to others (example: 'nice', 'understanding', 'compassionate', etc.) as opposed to agentic words which deal with ability (example: 'ambitious', 'confident', 'able', etc.).")
-
+        else:
+            agentic_report.set_summary("There were no agentic or communal words included at all.")
+            print(agentic_report.pprint())
         return agentic_report

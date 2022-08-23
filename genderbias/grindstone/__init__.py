@@ -17,7 +17,6 @@ Exploring the color of glass: letters of recommendation for female and male medi
 Goal: Check for grindstone words.
 """
 _dir = os.path.dirname(__file__)
-print(_dir)
 GRINDSTONE_WORDS = [word.strip() for word in open(_dir + "/grindstone.wordlist", 'r').readlines()]
 STANDOUT_WORDS = [w.strip() for w in open(_dir + "/standout.wordlist", 'r').readlines()]
 
@@ -54,5 +53,7 @@ class GrindstoneDetector(Detector):
             grindstone_report.set_summary("There were some grindstone words, but no standout words. Grindstone words make it appear as though the subject does not possess an inate ability. Consider replacing grindstone words such as 'hardworking' or 'tenacious' with standout words such as 'outstanding' or 'amazing' as it shows inherent skill.")
         elif found_standout:
             grindstone_report.set_summary("There were no grindstone words, but did contain standout words. This is okay.")
-
+        else:
+            grindstone_report.set_summary("There were no grindstone or standout words. Consider adding standout words.")
+            print(grindstone_report.pprint())
         return grindstone_report

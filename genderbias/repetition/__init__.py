@@ -13,7 +13,7 @@ class RepetitionDetector(Detector):
 
     def get_report(self, doc):
         """
-        I think this does it correctly. Originally I was counting the prevalence by checking all the words in the doc, but I think Trix and Psenka are just saying to count the number of repeated standout words in a single letter? Need verification. 
+        I think this does it correctly. Originally I was counting the prevalence by checking all the words in the doc, but I think Trix and Psenka are just saying to count the number of repeated standout words in a single letter? Need verification.
         """
         repetiton_report = Report("Repetition")
 
@@ -34,4 +34,5 @@ class RepetitionDetector(Detector):
             repetiton_report.set_summary("Standout words are being repeated. There are {num} standout words in this letter of recommendation. According to Trix and Psenka (2003), letters of recommendation for women contain 1.5 standout words while letters of recommendation for men contain 2.0. How do you compare?".format(num=num))
         else:
             repetiton_report.set_summary("This letter of recommendation strongly needs more standout words.")
+            print(repetiton_report.pprint())
         return repetiton_report

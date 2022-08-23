@@ -11,6 +11,7 @@ includes more effort statements, than accomplishment statements; return a
 summary that directs the author to add statements related to accomplishment.
 """
 
+## WORK ON THIS ONE!
 
 import os
 import spacy
