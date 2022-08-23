@@ -38,9 +38,10 @@ class GenderedWordDetector(Detector):
         report = Report("Unnecessarily Gendered Words")
 
         token_indices = doc.words_with_indices()
-
+        found = False
         for word, start, stop in token_indices:
             if word.lower() in GENDERED_WORDS:
+                found = True
                 report.add_flag(
                     Flag(
                         start,
@@ -55,5 +56,9 @@ class GenderedWordDetector(Detector):
                         ),
                     )
                 )
-
+        if found:
+            report.set_summary("There were gendered words used for no reason. Please remove them.")
+        else:
+            report.set_summary("Good job, no unnecessarily gendered words were included!")
+            print(report.pprint())
         return report
