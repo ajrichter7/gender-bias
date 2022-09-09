@@ -21,9 +21,9 @@ due to the comparison aspect. The minimal assurance detector requires a good und
 of English grammar and can be hard with only word lists.
 - Creation of a website that can process the letters easily allowing for a person to
 copy and paste their letters in. This could include the option to run all detectors
-on a letter or just specific ones possibly through buttons. Work may have begun already
+on a letter or just specific ones possibly through buttons. Work has begun already
 on a website but the status of which is unclear as it was done by undergraduates at Whitman
-a few summers prior. The github to the webserver is included [here](https://github.com/gender-bias/gender-bias-web). 
+a few summers prior. The github to the webserver is included [here](https://github.com/gender-bias/gender-bias-web).
 - Creation of a google docs plugin or Microsoft word plugin that runs similarly to the website.
 Updating the detectors to use Natural Language Processing (NLP). Right now,
 the detectors operate off of word lists which disregard context. This could
