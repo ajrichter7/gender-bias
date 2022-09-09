@@ -1,11 +1,12 @@
 # Gender-bias (A Thesis Proposal)
 
-##Problem:
-Letters of recommendation are biased not only in terms of gender but also contain ethnic and racial bias. There is a large collection of research papers that show this is a problem (Citations can be found here!)[https://drive.google.com/drive/folders/1J-Z8DU5IpA3pOYG4qYVTcDnyDvMKvyr7?usp=sharing] and also at the bottom of the repository for the gender-bias Github linked momentarily.
+## Problem:
+Letters of recommendation are biased not only in terms of gender but also contain ethnic and racial bias. There is a large collection of research papers that show this is a problem [(Citations can be found here!)](https://drive.google.com/drive/folders/1J-Z8DU5IpA3pOYG4qYVTcDnyDvMKvyr7?usp=sharing) and also at the bottom of the repository for the gender-bias Github linked momentarily.
 
 **Language:** Python and potentially Javascript to create a website
 
-##Project:
+## Project:
+
 This project is a [public repository](https://github.com/gender-bias/gender-bias) close to completion. Next steps include incorporating these detectors which are written in Python and deal with specific issues
 that arise in letters of recommendation into an easy to use tool for researchers and
 any person wishing to check their letters of recommendation. There are many avenues
@@ -37,7 +38,8 @@ The **goal** of the project is to bring attention to this problem and also make 
 
 The repository that I created has the most up to date information on the detectors and has been the most recently updated. The original project was conceptualized and created in 2018. There was also a team of undergraduate researchers who worked on this project with Janet Davis at Whitman.
 
-##Points of contact:
+## Points of contact:
+
 Alex Richter ‘22 (alexis.richter7@gmail.com)
 Mollie Marr, the original creator of the Github repository and graduate student at OHSU (marmo@ohsu.edu)
 Anna Ritz (aritz@reed.edu)
