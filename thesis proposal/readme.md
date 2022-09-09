@@ -32,7 +32,7 @@ the database could be Rate My Professors [(a data set that exists is included he
 Ideally we would use letters of recommendation written by professors but these
 would need to be properly anonymized. A tool for anonymization that exists and
 could serve as a jumping off point is included [here](https://github.com/microsoft/presidio) and has been created by Microsoft.
-- Extending the detectors to check for racial and ethic biases. A collection of literature on this issue is included here!
+- Extending the detectors to check for racial and ethic biases. A collection of literature on this issue is included [here](https://github.com/ajrichter7/gender-bias/blob/master/thesis%20proposal/ethnicandracialbiasescitations.pdf)!
 
 The **goal** of the project is to bring attention to this problem and also make it accessible to others. Right now the repository only works through terminal and requires a person to have at least basic knowledge of how to run a program. Ideally, this project will help people write better letters of recommendation through continual usage.
 
