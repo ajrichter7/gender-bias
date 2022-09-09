@@ -12,17 +12,17 @@ that arise in letters of recommendation into an easy to use tool for researchers
 any person wishing to check their letters of recommendation. There are many avenues
 that can be taken for this project which include:
 
-Completion of the final two detectors dealing with adjective usage and minimal assurance
+- Completion of the final two detectors dealing with adjective usage and minimal assurance
 in letters of recommendation. The description of all the detectors and the current state of each can be found
 [here](https://github.com/ajrichter7/gender-bias/tree/master/genderbias). The detectors operate by using word lists. The difficulty in implementation deals with word lists
 and accurately testing for these problems. Adjective usage detector implies that we can
 count the number of adjectives for women vs men which might end up requiring a dataset
 due to the comparison aspect. The minimal assurance detector requires a good understanding
 of English grammar and can be hard with only word lists.
-Creation of a website that can process the letters easily allowing for a person to
+- Creation of a website that can process the letters easily allowing for a person to
 copy and paste their letters in. This could include the option to run all detectors
 on a letter or just specific ones possibly through buttons.
-Creation of a google docs plugin or Microsoft word plugin that runs similarly to the website.
+- Creation of a google docs plugin or Microsoft word plugin that runs similarly to the website.
 Updating the detectors to use Natural Language Processing (NLP). Right now,
 the detectors operate off of word lists which disregard context. This could
 be an issue in phrasing and the detectors would identify some word as being
@@ -32,7 +32,7 @@ the database could be Rate My Professors [(a data set that exists is included he
 Ideally we would use letters of recommendation written by professors but these
 would need to be properly anonymized. A tool for anonymization that exists and
 could serve as a jumping off point is included [here](https://github.com/microsoft/presidio) and has been created by Microsoft.
-Extending the detectors to check for racial and ethic biases. A collection of literature on this issue is included here!
+- Extending the detectors to check for racial and ethic biases. A collection of literature on this issue is included here!
 
 The **goal** of the project is to bring attention to this problem and also make it accessible to others. Right now the repository only works through terminal and requires a person to have at least basic knowledge of how to run a program. Ideally, this project will help people write better letters of recommendation through continual usage.
 
