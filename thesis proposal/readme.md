@@ -40,7 +40,7 @@ The repository that I created has the most up to date information on the detecto
 
 ## Points of contact:
 
-Alex Richter ‘22 (alexis.richter7@gmail.com)
-Mollie Marr, the original creator of the Github repository and graduate student at OHSU (marmo@ohsu.edu)
-Anna Ritz (aritz@reed.edu)
-Janet Davis (davisj@whitman.edu)
+- Alex Richter ‘22 (alexis.richter7@gmail.com)
+- Mollie Marr, the original creator of the Github repository and graduate student at OHSU (marmo@ohsu.edu)
+- Anna Ritz (aritz@reed.edu)
+- Janet Davis (davisj@whitman.edu)
