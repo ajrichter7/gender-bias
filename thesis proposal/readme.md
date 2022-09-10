@@ -1,7 +1,7 @@
 # Gender-bias (A Thesis Proposal)
 
 ## Problem:
-Letters of recommendation are biased not only in terms of gender but also contain ethnic and racial bias. There is a large collection of research papers that show this is a problem [(Citations can be found here!)](https://drive.google.com/drive/folders/1J-Z8DU5IpA3pOYG4qYVTcDnyDvMKvyr7?usp=sharing) and also at the bottom of the repository for the gender-bias Github linked momentarily.
+Letters of recommendation are biased not only in terms of gender but also contain ethnic and racial bias. There is a large collection of research papers that show this is a problem [(Citations can be found here!)](https://drive.google.com/drive/folders/1J-Z8DU5IpA3pOYG4qYVTcDnyDvMKvyr7?usp=sharing) and also at the bottom of the repository for the gender-bias Github linked [here](https://github.com/gender-bias/gender-bias) as well as below.
 
 **Language:** Python and potentially Javascript to create a website
 
@@ -33,7 +33,7 @@ requires a database of anonymized letters of recommendation. One idea for
 the database could be Rate My Professors [(a data set that exists is included here)](https://data.mendeley.com/datasets/fvtfjyvw7d/2).
 Ideally we would use letters of recommendation written by professors but these
 would need to be properly anonymized. A tool for anonymization that exists and
-could serve as a jumping off point is included [here](https://github.com/microsoft/presidio) and has been created by Microsoft. Anonymization of this dataset could serve as its own thesis project potentially. 
+could serve as a jumping off point is included [here](https://github.com/microsoft/presidio) and has been created by Microsoft. Anonymization of this dataset could serve as its own thesis project potentially.
 - Extending the detectors to check for racial and ethic biases. A collection of literature on this issue is included [here](https://github.com/ajrichter7/gender-bias/blob/master/thesis%20proposal/ethnicandracialbiasescitations.pdf)!
 
 The **goal** of the project is to bring attention to this problem and also make it accessible to others. Right now the repository only works through terminal and requires a person to have at least basic knowledge of how to run a program. Ideally, this project will help people write better letters of recommendation through continual usage.
